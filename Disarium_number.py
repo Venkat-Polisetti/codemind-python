@@ -1,19 +1,22 @@
+import math
 n=int(input())
 temp=n
 temp1=n
 sum=0
+k=0
 c=0
-while n:
+while n!=0:
     d=n%10
     c+=1
-    n//=10
-while temp:
+    n=n//10
+while temp!=0:
     d=temp%10
-    sum+=pow(d,c)
-    c=c-1
-    temp//=10
+    k=pow(d,c)
+    c-=1
+    sum+=k
+    temp=temp//10
 if sum==temp1:
-    print("True")
+    print('True')
 else:
-    print("False")
+    print('False')
     
