@@ -1,29 +1,27 @@
 t=int(input())
-while t:
+v1=0
+v2=0
+for s in range(t):
     a=int(input())
+    b=a
     temp=a
-    while True:
-        for i in range(2,int(a**0.5)+1):
-            if(a%i==0):
+    while a>1:
+        for j in range(2,int(a**0.5)+1):
+           if a%j==0:
                 break
         else:
-            np=a
-            break
-        a+=1
-    a=temp
-    while a:
-        for i in range(2,int(a**0.5)+1):
-            if(a%i==0):
+         v1=a
+         break
+        a=a-1
+    while temp:
+        for j in range(2,int(temp**0.5)+1):
+            if temp%j==0:
                 break
         else:
-            pp=a
+            v2=temp
             break
-        a-=1
-    a=temp
-    if(abs(np-a)<abs(pp-a)):
-        print(np)
-    elif(abs(np-a)>abs(pp-a)):
-        print(pp)
+        temp+=1
+    if (abs(v1-b))>(abs(b-v2)):
+        print(v2)
     else:
-        print(pp)
-    t-=1
+        print(v1)
