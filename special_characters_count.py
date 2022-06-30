@@ -3,7 +3,7 @@ sc=0
 for i in a:
     if i.isalpha():
         continue
-    elif a.isdigit():
+    elif i.isdigit():
         continue
     elif i==' ':
         continue
