@@ -1,13 +1,13 @@
-a=input()
-a=a.lower()
-a=a.split()
-f=0
-c=[]
-for i in a:
-    b=0
-    for j in i:
-        if j in 'aeiou':
-            b+=1
-    c.append(b)
-d=max(c)
-print(d)
+s=input()
+s=s.lower()
+s=s.split()
+c=0
+max1=0
+for i in s:
+    for j in range(len(i)):
+        if i[j] in 'aeiou':
+          c+=1
+    if c>max1:
+        max1=c
+    c=0
+print(max1)
