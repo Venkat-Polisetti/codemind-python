@@ -1,10 +1,14 @@
 s=input()
 s=s.lower()
 c=0
-for i in range(26):
-    if chr(97+i) in s:
+k=''
+for i in s:
+    if i not in k:
+        k+=i
+for j in k:
+    if j in 'abcdefghijklmnopqrstuvwxyz':
         c+=1
 if c==26:
-    print('True')
+    print("True")
 else:
-    print('False')
+    print("False")
