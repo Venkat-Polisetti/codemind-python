@@ -1,9 +1,11 @@
 n=int(input())
 a=list(map(int,input().split()))
-t=[]
+k=[]
+max1=0
 for i in a:
-    i=str(i)
-    t.append(len(i))
+    if len(str(abs(i)))>max1:
+        max1=len(str(abs(i)))
 for i in a:
-    if len(str(i))==max(t):
-        print(i,end=' ')
+    if len(str(abs(i)))==max1:
+        k.append(i)
+print(*sorted(k))
