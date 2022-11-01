@@ -1,9 +1,10 @@
 s=input()
 s=s.split()
-a=list(s[-1])
-a.sort()
-b=a[0]
-if b.lower() in a:
-    print(b.lower())
+k=min(s[-1])
+if k.isupper():
+    if k.lower() in s[-1]:
+        print(k.lower())
+    else:
+        print(k)
 else:
-    print(b)
+    print(k)
