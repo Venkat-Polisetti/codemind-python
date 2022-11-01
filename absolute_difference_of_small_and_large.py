@@ -1,7 +1,10 @@
 s=input()
 s=s.split()
-x,y=0,0
+min1=0
+max1=0
 for i in s:
-    x=ord(max(i))
-    y=ord(min(i))
-    print(abs(x-y),end=' ')
+    min1=0
+    max1=0
+    min1=ord(min(i))
+    max1=ord(max(i))
+    print(abs(min1-max1),end=" ")
