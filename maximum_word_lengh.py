@@ -1,6 +1,7 @@
 s=input()
 s=s.split()
-a=[]
+max1=0
 for i in s:
-    a.append(len(i))
-print(max(a))
+    if len(i)>max1:
+        max1=len(i)
+print(max1)
