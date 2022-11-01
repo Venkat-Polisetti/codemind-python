@@ -1,17 +1,12 @@
-a=input()
-b=input()
-a,b=a.lower(),b.lower()
-a,b=list(a),list(b)
-c=[]
-a,b=set(a),set(b)
-for i in a:
-    if i==' ':
-        continue
-    if i not in b:
-        c.append(i)
-for i in b:
-    if i==' ':
-        continue
-    if i not in a:
-        c.append(i)
-print(len(c))
+s1=input()
+s2=input()
+s1=s1.lower()
+s2=s2.lower()
+v=""
+for i in s1:
+    if i not in s2 and i!=" " and i not in v:
+        v+=i
+for i in s2:
+    if i not in s1 and i!=" " and i not in v:
+        v+=i
+print(len(v))
