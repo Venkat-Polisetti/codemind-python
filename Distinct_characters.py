@@ -1,8 +1,8 @@
 s=input()
 s=s.lower()
-k=""
+v=""
 for i in s:
-    if i not in k:
-        k+=i
-t=sorted(k)
+    if s.count(i)==1:
+        v+=i
+t=sorted(v)
 print("".join(t).strip())
